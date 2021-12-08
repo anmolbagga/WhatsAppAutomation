@@ -28,8 +28,8 @@ public class UserChatPage extends BasePage {
 		click(documentIcon);
 	}
 	
-	public void verifyElementPresentforDeleiveryStatus() {
-		verifyElementPresent(deliveryStatusOfTheLastMessage);
+	public boolean verifyElementPresentforDeleiveryStatus() {
+		return verifyElementPresent(deliveryStatusOfTheLastMessage);
 	}
 
 

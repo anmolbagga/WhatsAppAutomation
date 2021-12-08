@@ -11,6 +11,7 @@ import com.vox.test.whatsapp.BaseTest;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import junit.framework.Assert;
 
 public class WhatsappStepDef extends BaseTest {
 
@@ -48,7 +49,7 @@ public class WhatsappStepDef extends BaseTest {
 
 	@Then("I see that the random file sent to that contact successfully")
 	public void i_see_that_the_random_file_sent_to_that_contact_successfully() {
-		userChatPage.verifyElementPresentforDeleiveryStatus();
+		Assert.assertEquals(true, userChatPage.verifyElementPresentforDeleiveryStatus());
 		tearDown();
 	}
 
