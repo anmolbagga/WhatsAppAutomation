@@ -17,7 +17,6 @@ public class BaseTest extends AbstractTestNGCucumberTests {
 	public AppiumDriver driver;
 	
 	public void setUp() throws MalformedURLException {
-		System.out.println("hello");
 		DesiredCapabilities caps = new DesiredCapabilities();
 		caps.setCapability("platformName", "Android");
         caps.setCapability("automationName", "UiAutomator2");
