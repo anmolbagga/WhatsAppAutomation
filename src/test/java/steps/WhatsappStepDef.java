@@ -19,8 +19,8 @@ public class WhatsappStepDef extends BaseTest {
 	SelectContactPage selectContactsPage;
 	UserChatPage userChatPage;
 
-	@Given("I launch the whatsapp app on my phone")
-	public void i_launch_the_whatsapp_app_on_my_phone() throws MalformedURLException {
+	@Given("I launch whatsapp app on my phone")
+	public void i_launch_whatsapp_app_on_my_phone() throws MalformedURLException {
 		setUp();
 		chatPage = new ChatPage(driver);
 		recentFilesPage = new RecentFilesPage(driver);
@@ -33,21 +33,21 @@ public class WhatsappStepDef extends BaseTest {
 		chatPage.clickNewChatButton();
 	}
 
-	@When("I select users from the user list")
-	public void i_select_users_from_the_user_list() {
+	@Then("I select a contact from the list of users")
+	public void i_select_a_contact_from_the_list_of_users() {
 		selectContactsPage.clickContactIntheContactList();
 	}
 
-	@When("I send a document to the user as attachment")
-	public void i_send_a_document_to_the_user_as_attachment() {
+	@When("I send a random file to that contact")
+	public void i_send_a_random_file_to_that_contact() {
 		userChatPage.clickAttachmentIcon();
 		userChatPage.clickDocumentIcon();
 		recentFilesPage.clickRecentFile();
 		recentFilesPage.clickSendButton();
 	}
 
-	@Then("I see that the file is sent to the user")
-	public void i_see_that_the_file_is_sent_to_the_user() {
+	@Then("I see that the random file sent to that contact successfully")
+	public void i_see_that_the_random_file_sent_to_that_contact_successfully() {
 		userChatPage.verifyElementPresentforDeleiveryStatus();
 		tearDown();
 	}

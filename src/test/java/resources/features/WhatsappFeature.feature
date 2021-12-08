@@ -4,8 +4,8 @@ Feature: Test the chat feature of whatapp
 
   @tag1
   Scenario: Chat feature of sending docs in attachment
-    Given I launch the whatsapp app on my phone
+    Given I launch whatsapp app on my phone
     When I initiate a new chat
-    And I select users from the user list
-    And I send a document to the user as attachment
-    Then I see that the file is sent to the user
+    Then I select a contact from the list of users
+    When I send a random file to that contact
+    Then I see that the random file sent to that contact successfully
