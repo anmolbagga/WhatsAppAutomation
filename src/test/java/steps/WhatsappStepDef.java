@@ -20,9 +20,9 @@ public class WhatsappStepDef extends BaseTest {
 	RecentFilesPage recentFilesPage;
 	SelectContactPage selectContactsPage;
 	UserChatPage userChatPage;
-
-	@Given("I launch whatsapp app on my phone")
-	public void i_launch_whatsapp_app_on_my_phone() throws MalformedURLException {
+	
+	@Given("I launch WhatsApp app on my phone")
+	public void i_launch_whats_app_app_on_my_phone() throws MalformedURLException {
 		setUp();
 		chatPage = new ChatPage(driver);
 		recentFilesPage = new RecentFilesPage(driver);
