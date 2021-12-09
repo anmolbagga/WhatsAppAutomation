@@ -1,10 +1,10 @@
 # WhatsAppAutomation
 
 **Prerequisite to run the project** 
-* Whatsapp should be installed and login to whatsapp with a user
-* Add a contact "Anmol" with phone number +91 9868096126 in your contact list. We will use this user "Anmol" to send doc
+* Whatsapp should be installed and user should be logged in to whatsapp
+* There should be atleast 1 contact added and present in the contact list
 * Appium server should be running http://localhost:4723/wd/hub
-* Please change the capabilities based on the phone you are running this test/project.
+* Please change the capabilities in the "BaseTest" class based on the phone you want to test on.
 
 **Information about the project**
 
@@ -16,6 +16,6 @@
 
 **Reports** will be generated in /target/cucumber-html-report.html. You can open this in any browser.
 
-How to run the test 
+**How to run the test **
 **"TestRunner"** file runs the project. You can simply right click and run this as a testNG test and this will run the feature file.
 The other and recommended way is to open a terminal or command prompt and navigate to the project directory. Run the command **mvn clean test -Pandroid**
