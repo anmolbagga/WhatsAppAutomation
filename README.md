@@ -16,6 +16,6 @@
 
 **Reports** will be generated in /target/cucumber-html-report.html. You can open this in any browser.
 
-**How to run the test **
+**How to run the test**
 **"TestRunner"** file runs the project. You can simply right click and run this as a testNG test and this will run the feature file.
 The other and recommended way is to open a terminal or command prompt and navigate to the project directory. Run the command **mvn clean test -Pandroid**
