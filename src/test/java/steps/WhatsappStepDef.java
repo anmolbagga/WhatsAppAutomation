@@ -37,7 +37,7 @@ public class WhatsappStepDef extends BaseTest {
 	
 	@Then("I see a list of the users")
 	public void i_see_a_list_of_the_users() {
-	   // TODO need to add a verification for the list of users
+		Assert.assertEquals(true, selectContactsPage.verifyContactListIsThere());
 	}
 
 	@When("I select a contact from the list of users")

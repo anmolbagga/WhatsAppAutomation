@@ -10,12 +10,19 @@ public class SelectContactPage extends BasePage {
 		super(appiumDriver);
 		// TODO Auto-generated constructor stub
 	}
+	
+	@AndroidFindBy(xpath = "(//*[contains(@resource-id,'com.whatsapp:id/contactpicker_text_container')])")
+	MobileElement contactList;
 
-	@AndroidFindBy(xpath = "//android.widget.TextView[@text='Anmol']")
+	@AndroidFindBy(xpath = "(//*[contains(@resource-id,'com.whatsapp:id/contactpicker_text_container')])[3]")
 	MobileElement contactInContactList;
 
 	public void clickContactIntheContactList() {
 		click(contactInContactList);
+	}
+	
+	public boolean verifyContactListIsThere() {
+		return verifyElementPresent(contactList);
 	}
 
 }
